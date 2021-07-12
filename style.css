@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root {
+	--primary-color: #8f18c7;
+	--primary-dark: #5b0095;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#main_nav {
+	width: 100%;
+	height: 5rem;
+	background-color: var(--primary-dark);
+	background: linear-gradient(
+		80deg,
+		var(--primary-color),
+		var(--primary-dark)
+	);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+#main_nav li {
+	display: inline;
+}
+
+#main_nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+
+#main_nav a::after {
+	content: '------';
+	visibility: hidden;
+}
+
+body {
+	background: rgb(227, 225, 255);
+	background: linear-gradient(
+		35deg,
+		rgba(227, 225, 255, 0.7) 0%,
+		rgba(173, 146, 244, 0.7) 50%,
+		rgba(245, 207, 246, 0.7) 100%
+	);
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+}
+main {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+main section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section img {
+	width: 500px;
+	max-width: 100%;
+	border-radius: 20px;
+	border: 5px solid #ffff;
+	filter: drop-shadow(0 2px 5px black);
+}
+
+main section article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
+	border-radius: 20px;
+	margin-bottom: 2rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(20px);
+	border: solid 1px rgba(255, 255, 255, 02);
+	height: 100%;
+	width: 95%;
+	padding: 1px;
+	margin-bottom: 1rem;
+}
+main section article a {
+	color: var(--primary-dark);
+}
+
+.proyectos {
+	width: 98vw;
+	display: grid;
+	grid-template-columns: 32% 32% 32%;
+	padding-top: 1rem;
+}
+
+.proyectos img {
+	width: auto;
+	max-height: 50vh;
+}
+
+@media (max-width: 770px) {
+	.proyectos {
+		grid-template-columns: 50% 50%;
+		row-gap: 2rem;
+		margin-top: 2rem;
+	}
+}
+
+@media (max-width: 420px) {
+	.proyectos {
+		grid-template-columns: 100%;
+		row-gap: 1rem;
+		margin: auto;
+		margin-top: 2rem;
+		width: 90%;
+	}
+	#main_nav .menu {
+		display: none;
+		visibility: hidden;
+	}
+	main section img {
+		width: 85%;
+	}
+	header div nav ul a {
+		text-align: center;
+	}
+}
+
+main h1 {
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+main h1 label:nth-of-type(1) {
+	color: var(--primary-color);
+}
+
+main h1 label:nth-of-type(2) {
+	color: var(--primary-dark);
+}
